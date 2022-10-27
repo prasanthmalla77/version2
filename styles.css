@@ -1,0 +1,204 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: Century Gothic;
+}
+/* header{
+	 background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(web_images.jpg);
+	 height:  100vh;
+	 background-size: cover;
+	 background-position: center;
+} */
+h5{
+	color :rgb(0, 0, 0)
+}
+div a{
+	color: #98A8F8;
+}
+ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+}
+ul li{
+	 display: inline-block;
+}
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+.article-head{
+	height: 300px;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	background-color: rgb(255, 255, 255);
+}
+.article-icon{
+	width: 150px;
+	height: 190px;
+	margin: 20px;
+}
+.collection-image{
+	width: 150px;
+	margin: 10px;
+}
+
+.img-with-text{
+	padding-left: 40px;
+	margin: 20px;
+	width: 180px;
+}
+.left-bar{
+	text-decoration: none;
+	font-family: sans-serif;
+	text-align: center;
+	padding-top: 20px;
+	width: 25%;
+	font-size: larger;
+}
+.logo img{
+	float: left;
+	width: 95px ;
+	padding: 8px 7px;
+	height: auto;
+}
+.main{
+	 max-width: 1200px;
+	 margin: auto;
+}
+.right-preview{
+	
+	padding: 20px;
+	width: 75%;
+}
+.title{
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.title h1{
+	color:floralwhite;
+	font-size: 50px;
+}
+.title h4{
+	color:floralwhite;
+	font-size: 20px;
+}
+
+.total-preview{
+	display: flex;
+}
+.button{
+	position: absolute;
+	top: 70%;
+	left: 70%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+	color: #000;
+}
+.grid-container
+		{
+		   text-align: center;
+		   padding-top: 20px;
+	       display: grid;
+		   padding-left: 60px;
+		   grid-template-columns: auto auto auto;
+           column-gap: 30px;
+		   row-gap: 30px;
+		   text-align: center;
+		   background-color: #FAF7F0;
+       }
+
+
+
+.grid-container div{
+    width: 250px;
+	/* border: 3px solid grey; */
+	background-color: #ffffff;
+	padding: 20px;
+	margin: 3px;
+	border-radius: 20px;
+}
+
+.grid-container a{
+	text-decoration: none;
+}
+
+.grid-container h5
+{
+	font-size:15px;
+}
+
+
+s2
+{
+	background-color:  #eee6ff;
+}
+
+s2 p
+{
+	color:black;
+}
+
+/* styles for preview page*/
+
+.anchor{
+    text-decoration : none;
+}
+.download-button{
+	margin-right: 0%;
+	background-color: rgb(55, 232, 99);
+  	border: none;
+  	color: white;
+  	padding: 10px 25px;
+  	cursor: pointer;
+  	font-size: 15px;
+}
+.download-button:hover{
+	background-color: green;
+}
+.header{
+    background-color :#98A8F8;
+    height : 60px;
+	
+}
+
+.issue{
+	height: auto;
+    display : flex;
+    background-color :#CDFCF6;
+}
+.issue-cover{
+    margin : 15px;
+    height : auto;
+}
+.issue-intro{
+	display: flex;
+    padding-top: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: grey;
+}
+.preview-cover{
+	border-radius: 20px;
+	padding: 10px;
+	height: 150px;
+}
+.top-nav{
+    /* padding-top : 10px;
+	padding-right: 20px; */
+    text-align: right;
+}
