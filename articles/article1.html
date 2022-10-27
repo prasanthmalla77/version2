@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body{
+            color: grey;
+            font-family: sans-serif;
+        }
+        .page-div{
+            padding-top: 20px;
+            display: flex;
+            background-color: #FAF7F0
+        }
+        .left-bar{
+            padding-left: 10px;
+            text-align: start;
+            width: 25%;
+        }
+        .right-content{
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div >
+            <div style="background-color:#667dd9 ;padding: 0.5%;">
+                    <img src="/images/logo.png" width="50px" style="border-radius: 15px;">
+                <ul>
+                    <li class=""><a href="/index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </div>
+        </div>
+    	<div class="title">
+    </div>
+    <div class="issue">
+        <div class="issue-cover">
+            <img class="preview-cover" src="/images/algo.jpeg">
+        </div>
+        <div class="issue-intro">
+            <div class="introduction">
+                <h1>Algorithmic Bias and Multi-
+                    label Classification: Topics of 
+                    Importance in Machine Learning 
+                    and Data Science</h1>
+            </div>
+            <div style="padding: 15px;">
+                <h3 style="text-align: center;">Article</h3>
+                <button class="download-button"><a style="color: white;" class="anchor" href="/files/Article-1.pdf">Download</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="page-div">
+        <div class="left-bar">
+            <a class="anchor" href="#intro">Introduction</a><br>
+            <a class="anchor" href="#dive">Dive</a><br>
+            <a class="anchor" href="#references">Refrences</a><br>
+            <a class="anchor" href="#author">Author</a><br>
+        </div>
+        <div class="right-content">
+            <p id="intro">
+                <h2>Introduction</h2><br>
+                Machine learning (ML) [1] and data science (DS) are two 
+                important dominating fields in recent days in the area of 
+                computer science and information technology. They are 
+                increasingly used as effective and efficient tools for solving 
+                all most all problems occurring in every sphere of life. The 
+                dramatic growth of algorithmic decision making under 
+                the umbrella of machine learning and decision science 
+                continues to gain momentum in marketing, research in 
+                this stream is still inadequate despite the devastating, 
+                asymmetric and oppressive impacts of algorithmic bias 
+                on various customer groups. There are advantages to 
+                algorithmic decision-making; unlike human, ML and DS 
+                agents does not become tired. However, like human, 
+                ML and DS agents are vulnerable to discrimination that 
+                renders its decisions ‘‘unfair”. Discrimination is the unfair 
+                treatment of individuals based on specific characteristics, 
+                also called sensitive features such as gender and race. 
+                It has been found that machine learning not only leads 
+                to unexpected results with bias, but also has amplified 
+                algorithmic bias. Extensive studies have been conducted 
+                to achieve the fairness in ML and DS model, and generally 
+                categorized in three approaches: preprocessing, in-
+                processing and post-processing. Pre-processing solves 
+                the problem by eliminating the bias present in the training 
+                data itself. In-processing reduces the bias by adding a 
+                constraint to the learning algorithm even if there is a bias 
+                in the data. Postprocessing ensues decisions themselves. 
+                Readers may refer [2] for more details on algorithmic bias. 
+                Now we will turn our attention to second part of our topic 
+                of discussion i.e., multilabel classification.
+            </p><br>
+            <p id="dive">
+                <h2>Dive</h2><br>
+                Multilabel classification, an equally important topic of ML 
+and DS aims to build classification model for instances 
+assigned with multiple-labels simultaneously which is a 
+common learning paradigm in real world application [3]. It 
+deals with multiple labels being assigned to every instance 
+in a dataset which can be assigned to more than one class 
+simultaneously. Multi-label classification tasks exist in 
+many real-world applications, such as, gene classification 
+in bioinformatics[2], medical diagnosis, document 
+classification, music annotation, image recognition, and 
+so on. All these applications require effective and efficient 
+multilabel classification algorithms. There exist a variety 
+of multilabel classification algorithms[3]. The existing 
+multilabel classification algorithms are developed based 
+on two basic approaches like algorithm adaptation and 
+problem transformation method. Problem transformation 
+method is to transfer multi-label classifications into 
+multiple traditional single label classifications, specifically, 
+multiple binary classifications. After a multilabel 
+classification problem is transferred into multiple 
+binary classification problem then, all the traditional 
+classification algorithms can be applied directly to build 
+a classifier for each binary dataset and make prediction 
+for its correlated test instances. For more details about 
+multilable classification, readers may refer a tutorial 
+authored by Gibaja and Ventura [3].
+            </p><br>
+            <p>
+                <h2>Refrences</h2>
+                <p id="references"><br>
+                    [1] T. G. Dietterich. “Machine learning,” in Encyclopedia of 
+                    Cognitive Science, vol. II, L. Nadel, Ed. London: Nature 
+                    Publishing Group, 2003, pp. 971–981. <br>
+                    [2] A. Koene, Algorithmic Bias: Addressing Growing Concerns, 
+                    IEEE Technol. Soc. Mag. 26 (2) (2017) 31–32.<br>
+                    [3] E. Gibaja and S. Ventura, “A tutorial on multilabel learning,” 
+                    ACM Computing Surveys (CSUR), vol. 47, no 3, pp. 52:1–
+                    52:38, April 2015.
+                </p>
+            </p><br>
+            <p>
+                <h2>Author</h2><br>
+                <p id="author">
+                    About the Author
+                    Satchidananda Dehuri, TARE Fellow is working as a Professor in the Department of Computer Science, 
+                    Fakir Mohan University, Balasore, Odisha, India since 2013. He received his M.Tech. and Ph.D. degrees in 
+                    Computer Science from Utkal University, Vani Vihar, Odisha in 2001 and 2006, respectively. He visited as 
+                    a BOYSCAST Fellow to the Soft Computing Laboratory, Yonsei University, Seoul, South Korea under the 
+                    BOYSCAST Fellowship Program of DST, Govt. of India in 2008. His h-index as per Google Scholar is more 
+                    than 25. He has already published about 200 research papers in reputed journals and referred conferences.
+                </p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
