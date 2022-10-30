@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body{
+            color: grey;
+            font-family: sans-serif;
+        }
+        .page-div{
+            padding-top: 20px;
+            display: flex;
+            background-color: #FAF7F0
+        }
+        .left-bar{
+            padding-left: 10px;
+            text-align: start;
+            width: 25%;
+        }
+        .right-content{
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div >
+            <div style="background-color:#667dd9 ;padding: 0.5%;">
+                    <img src="../images/logo.png" width="50px" style="border-radius: 15px;">
+                <ul>
+                    <li class=""><a href="./index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </div>
+        </div>
+    	<div class="title">
+    </div>
+    <div class="issue">
+        <div class="issue-cover">
+            <img class="preview-cover" src="../images/algo.jpeg">
+        </div>
+        <div class="issue-intro">
+            <div class="introduction">
+                <h1>Dynamis Behavior based Customer 
+churn Prediction</h1>
+            </div>
+            <div style="padding: 15px;">
+                <h3 style="text-align: center;">Article</h3>
+                <button class="download-button"><a style="color: white;" class="anchor" href="C:\Users\DEEKSHITHA\OneDrive\Desktop\todo\Web\Article-16.pdf">Download</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="page-div">
+        <div class="left-bar">
+            <a class="anchor" href="#intro">Introduction</a><br>
+            <a class="anchor" href="#dive">Dive</a><br>
+            <a class="anchor" href="#references">Draw Backs</a><br>
+            <a class="anchor" href="#about">About</a><br>
+            <a class="anchor" href="#author">Author</a><br>
+        </div>
+        <div class="right-content">
+            Venkata Rajat Kumar Vuppala
+Pursuing his Masters in the stream of Data Science at JNTU Gurajada Vizianagaram.<br> Email: <a href="mailto:vvenkatarajat@gmail.com">vvenkatarajat@gmail.com</a><br><br>
+
+Customer behavior plays a vital role in customer service sector to accurately predict the customer churn. 
+Customer churn arises when the customer does not want to continue their relations with the company 
+during certain time frame. As there is increase in competition among customer service sector, it has 
+dominant to predict the Dynamic behavior of the customer. We have adapted advent of the deep learning 
+paradigms namely LSTM and variants of LSTM based models to predict the churn on daily dynamic behavior 
+of the customer. The predictive performance of these models evaluated on dataset collected from mobile 
+operator. The results showed that the daily models significantly outperform previously developed models 
+in terms of predicting churners earlier and more accurately.<br>
+
+Keywords : Churn Prediction; Mobile Telecom; Deep Learning; Dynamic Behavior.
+            <p id="intro">
+                <h2>Introduction</h2><br>
+                Customer churn refers to the situation where by a 
+customer leaves a service provider. In simple terms, churn 
+is defined as cancellation of subscription by a client to a 
+service they have been using. Churn Prediction is essential 
+in predicting the clients most likely to unsubscribe based 
+on their usage of services like company tariffs, poor 
+customer care or frequent technical issues, helping 
+organizations to focus more on the customers with high 
+risk of leaving.<br>
+
+Customer churn happens when customers decide to 
+not continue purchasing products/services from an 
+organization and end their association. It is an integral 
+parameter for the organization since acquiring a new 
+customer could cost almost 7 times more than retaining 
+an existing customer. Customer churn can prove to be a 
+roadblock for an exponentially growing organization and 
+a retention strategy should be decided in order to avoid 
+an increase in customer churn rates.
+            </p><br>
+            <p id="dive">
+                <h2>Dive</h2><br>
+                The ability to be able to predict that a certain customer 
+is at a very high risk of churning, while there is still 
+some time to do something significant about it, itself 
+represents a great additional potential revenue source 
+for any business. Since the customer is the major source 
+of profit, a method to promptly manage customer churn 
+gains vital significance for the survival and development 
+of any telecommunication company. For many telecoms 
+companies, figuring out how to deal with churn is 
+turning out to be the key for continued existence of their 
+organizations.
+In order to learn more about this issue and come up with a 
+workable solution, research and implementations done in 
+the past by other authors were examined. Churn studies 
+are primarily focused on industries with contractual 
+settings, such as telecommunications, banking, insurance, 
+etc., where a consumer must sign a contract in order to 
+use the service. As a result, the company labels a customer 
+who cancels their contract as a churner, as opposed to a 
+customer who keeps using the company’s services and is 
+recognized as a non-churner.
+The dataset for this research is based on the telecom 
+statistics gathered from the Francisco gallery of bigml.
+com will be the dataset we use for the majority of our 
+discussion in this paper. This consists of 3333 examples 
+and 20 qualities, along with a final categorization of either 
+”Churned” or ”Not Churned” for each client, is based 
+on telecom facts acquired from bigml.com's Francisco gallery. There are 483 churns and 2,850 non churn 
+customers in the dataset. This dataset is also used to 
+predict the customer’s behavior. It gives basic information 
+about the customers service usage as well as information 
+on their membership, both of which are useful for 
+training the base model. Each record is described by the 
+following attributes i.e. churn as class label, area, service 
+calls, evening calls, evening charge, minutes spend in the 
+evening, day calls, day charge, minutes spend in day time, 
+international calls, international charge, minutes spend in 
+international calls and finally it includes night calls, night 
+charge, minutes spend in nights. The dataset is divided 
+into training set and test set. The deep neural network is 
+trained on the training data and tested on the test data.
+            </p><br>
+            <p>
+                <h2>Drawbacks</h2>
+                <p id="references"><br>
+                   Previous works on churn prediction focused on predicting 
+churn monthly based on static or monthly dynamic 
+behavior. Two main drawbacks can be drawn from these 
+works;
+1. Predicting churn monthly is late for customers who 
+decided to leave at the beginning of the last month 
+because the customer will be identified as churners 
+by the monthly model at the next month.
+2. Considering the monthly behavior 
+ignores the changes in customer’s 
+behavior over days of the month and this may reduce 
+the discriminative ability of the prediction model, and 
+thus, its predictive performance.
+            </p><br>
+            <h2>About</h2>
+                <p id="about"><br>
+                   In this study, we attempt to forecast daily levels of 
+customer churn using dynamic shifts in daily activity. As 
+a solution, we used a multivariate time series to represent 
+the customer’s daily behavior and addressed the problem 
+of daily churn prediction using this representation.
+Meaningful features from timeseries data are extracted 
+and then fed to a traditional machine learning model, 
+such as Random Forest, to make predictions. Deep 
+Learning models like LSTM and its Variants, which include 
+classic LSTM, stacked LSTM, bidirectional LSTM, and GRU, 
+will learn the representative features from the multivariate 
+time series and simultaneously predict churn.
+The practical implementation of this study is suggested by 
+our findings, which show that the deep learning models 
+we suggest are operationally effective and forecast 
+churners earlier and more precisely than the machine 
+learning models and monthly models.
+</p></br>
+            <p>
+                <h2>Author</h2><br>
+                <p id="author">
+                    Venkata Rajat Kumar Vuppala is currently pursuing his Masters in the stream of Data Science at JNTU 
+Gurajada Vizianagaram and completed his bachelors at Raghu Institute of Technology, Visakhapatnam. 
+His fascination is towards latest advancements in the domain of Deep Learning and Machine Learning 
+and his current research interest lie in Data Science, Machine Learning and Deep Learning.
+                </p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

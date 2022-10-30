@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body{
+            color: grey;
+            font-family: sans-serif;
+        }
+        .page-div{
+            padding-top: 20px;
+            display: flex;
+            background-color: #FAF7F0
+        }
+        .left-bar{
+            padding-left: 10px;
+            text-align: start;
+            width: 25%;
+        }
+        .right-content{
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div >
+            <div style="background-color:#667dd9 ;padding: 0.5%;">
+                    <img src="../images/logo.png" width="50px" style="border-radius: 15px;">
+                <ul>
+                    <li class=""><a href="./index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </div>
+        </div>
+    	<div class="title">
+    </div>
+    <div class="issue">
+        <div class="issue-cover">
+            <img class="preview-cover" src="../images/algo.jpeg">
+        </div>
+        <div class="issue-intro">
+            <div class="introduction">
+                <h1>Data Quality and Machine 
+Learning: What’s the Relationship?</h1>
+            </div>
+            <div style="padding: 15px;">
+                <h3 style="text-align: center;">Article</h3>
+                <button class="download-button"><a style="color: white;" class="anchor" href="/files/Article-1.pdf">Download</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="page-div">
+        <div class="left-bar">
+            <a class="anchor" href="#intro">Introduction</a><br>
+            <a class="anchor" href="#dive">Dive</a><br>
+            <a class="anchor" href="#references">Refrences</a><br>
+            <a class="anchor" href="#author">Author</a><br>
+        </div>
+        <div class="right-content">
+            <p id="intro">
+                <h2>Introduction</h2><br>
+                The buzzword AI is an increasingly used term in today’s 
+technological world. In the last decade, we have 
+witnessed enormous growth in AI enabled applications 
+like never before. At the start of last decade, the focus of 
+Machine Learning (ML) applications was to tag or classify 
+images and today we have ML algorithms that can even 
+generate images (e.g. DALL-E 2). Similarly, a decade ago 
+we started with applications that can predict sentiment 
+of a user from movie reviews and today we have systems 
+that can generate text and even fill parts of software code 
+(e.g. Github Copilot).
+Many ML practitioners consider the year 2012 as the 
+breakthrough year for AI where they started to believe 
+that deep learning models indeed work better than 
+traditional ML methods. This success can be attributed 
+to two important factors 1) the availability of large 
+training datasets and 2) the availability of infrastructure to 
+train large deep learning models. If you look at any ML 
+problem setting in the real world, it has two main parts 
+which are the core model part and the core data part. The 
+core model part deals with designing models (say deep 
+learning models), optimizers, coming up with suitable 
+training schemes, validating and maintaining these trained 
+models. As a result of this, we have witnessed a number 
+of important technical developments on the core model 
+part like improvements in Convolutional Neural Networks 
+(CNNs), Variational AutoEncoders (VAEs), Generative 
+Adversarial Networks (GANs) and Transformer Models. On 
+the other hand, talking about the core data aspect, apart 
+from collecting huge datasets, very little or no emphasis 
+is laid on the quality of the training data and managing it.
+            </p><br>
+            <p id="dive">
+                <h2>Dive</h2><br>
+               Many challenges that AI based applications face in the real 
+world are due to imperfections in data. Imagine a scenario 
+where you are developing an AI algorithm which is to be 
+deployed in a real world application. To ensure that your 
+AI algorithm works with extreme reliability, this algorithm 
+has to be trained with data that contains even rarest of 
+the rare situations that the application might encounter 
+in the real world. Recently, Tesla’s autopilot feature had 
+mistaken a horse carriage for a truck and this could be 
+due to the long tailedness of the data (the ML model(s) 
+deployed in autopilot may have encountered very few or 
+no scenes containing horse carriage during training). This 
+is why “Data-centric AI” is needed. Here, the focus is on 
+collecting good quality training data and ensuring good 
+quality labelling. This also includes ensuring good data 
+coverage, which could be done through search, retrieval 
+of rare instances, usage of data augmentations (selfsupervision) and synthetic data generation to generate 
+rare scenarios or to fill domain gaps. This also includes 
+methods to identify and handle data drifts post model 
+deployment.
+            </p><br>
+            <p>
+                <h2>Refrences</h2>
+                <p id="references"><br>
+                    There is a saying that “Your model is as good as your data” 
+and good quality data is a must to build any successful ML 
+pipeline. As articulated by Andrew Ng in “MLOps: From 
+Model-centric to Data-centric AI”, the future is moving 
+towards Data-centric A
+                </p>
+            </p><br>
+            <p>
+                <h2>Author</h2><br>
+                <p id="author">
+                    About the Author
+                     Jitendra Yasaswi Katta is a Research Scientist at the Robert Bosch Research and Technology 
+Center in Bangalore, India. His work spans the intersection of Computer Vision and Machine 
+Learning, with special focus on self-supervised learning and representation learning. Prior to this, 
+he worked at Teradata Labs where he was part of the R&D team developing Machine Learning 
+applications for prediction tasks. He received his Master’s degree (MS by Research) in Computer 
+Science and Engineering from IIIT Hyderabad and Bachelor’s degree in Information Technology 
+from JNTUK UCE Vizianagaram.
+                </p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

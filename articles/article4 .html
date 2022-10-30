@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body{
+            color: grey;
+            font-family: sans-serif;
+        }
+        .page-div{
+            padding-top: 20px;
+            display: flex;
+            background-color: #FAF7F0
+        }
+        .left-bar{
+            padding-left: 10px;
+            text-align: start;
+            width: 25%;
+        }
+        .right-content{
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div >
+            <div style="background-color:#667dd9 ;padding: 0.5%;">
+                    <img src="../images/logo.png" width="50px" style="border-radius: 15px;">
+                <ul>
+                    <li class=""><a href="../index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </div>
+        </div>
+    	<div class="title">
+    </div>
+    <div class="issue">
+        <div class="issue-cover">
+            <img class="preview-cover" src="../images/data_pipelines.png">
+        </div>
+        <div class="issue-intro">
+            <div class="introduction">
+                <h1>Data Pipelines architecture and 
+basic understanding</h1>
+            </div>
+            <div style="padding: 15px;">
+                <h3 style="text-align: center;">Article</h3>
+                <button class="download-button"><a style="color: white;" class="anchor" href="/files/Article-4.pdf">Download</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="page-div">
+        <div class="left-bar">
+            <a class="anchor" href="#intro">Introduction</a><br>
+            <a class="anchor" href="#Data Source">Data Source</a><br>
+            <a class="anchor" href="#Ingestion">Ingestion</a><br>
+            <a class="anchor" href="#Transformation">Transformation</a><br>
+            <a class="anchor" href="#author">Author</a><br>
+        </div>
+        <div class="right-content">
+            <p id="intro">
+                <h2>Introduction</h2><br>
+                Data pipelines are the series of steps performed to process 
+the data into required formats/ destination sources. In 
+these pipelines the output of each step will be source to 
+the following steps. There are different scenarios where 
+the pipelines are designed, it can be a simple batch job to 
+read raw data and convert it into formatted data and saving 
+into sources tables, consuming data from the upstream 
+applications and perform transformations so that the 
+data could be utilized by the downstream applications or 
+creating visualizations using the transformed data etc.
+There are three major factors that contribute to the speed 
+with which the data flows in a pipeline, Throughput can 
+be defined as the rate at which the data flows through 
+the pipeline. Latency is defined as the time required for 
+a single unit/token of data to flow through the pipeline.
+Reliability is the measure completeness and accuracy. 
+There are different techniques that are in place to ensure 
+the data reliability like logging, auditing, validating etc.
+There are some basic questions one should have before 
+building a pipeline.
+.What data source?
+.What type of ingestion?
+.How frequent should the load happen?
+.How should the end data look like?
+.Is the data consumed by any downstream applications 
+or any visualizations are to be built on top of it?
+            </p><br>
+            <p id="Data Source">
+                <h2>Data Source</h2><br>
+                It can be considered as the first and key layer of the design. 
+It may include the data from any streaming sources, SaaS 
+applications and relational databases etc.
+            </p><br>
+            <p id="Ingestion">
+                <h2>Ingestion</h2>
+                It is defined as a process to read the data from the data 
+sources. We can read the data from each source using the 
+API’s provided by the data sources itself. Before reading 
+the data, we need to analyze the data sets to gain insight 
+of the data through a process called Data Profiling, which 
+is used to examine the quality and structure. The data can 
+be ingested either batch ingestion or streaming ingestion. 
+Batch Ingestion is a sequential processing where the set 
+of data records can be extracted and processed together. 
+These batch processes can be scheduled or triggered 
+manually. In Stream ingestion a single record of data can 
+be processed automatically from the data source as soon 
+as it is created or in time windows which can be used to 
+give near real time data.
+This ingestion or extraction frequency depends on the 
+requirement on how the subsequent application need the 
+data to be loaded.
+                    </p>
+            </p><br>
+<p id="Transformation">
+                <h2>Transformation</h2>
+                Once the data extraction is done, we can transform the 
+data into the required format of the destination system, 
+which helps to analyze the data.
+Destination:
+A destination is a data warehouse, a database or a data 
+mart to hold the data after the data is processed
+                    </p>
+            </p><br>
+
+            <p>
+                <h2>Author</h2><br>
+                <p id="author">
+                    About the Author
+                    Lohit Ravi Teja Bhupati is currently working as Data Engineer at Walmart, Arkansas. He has 
+done Masters thesis in Machine learning and Neuro imaging from University of Houston Clear 
+lake, USA. With his interest towards Machine learning and data analysis, he is always upscaling 
+by learning new technologies and continuing his passion.
+                </p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

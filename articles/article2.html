@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body{
+            color: grey;
+            font-family: sans-serif;
+        }
+        .page-div{
+            padding-top: 20px;
+            display: flex;
+            background-color: #FAF7F0
+        }
+        .left-bar{
+            padding-left: 10px;
+            text-align: start;
+            width: 25%;
+        }
+        .right-content{
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div >
+            <div style="background-color:#667dd9 ;padding: 0.5%;">
+                    <img src="../images/logo.png" width="50px" style="border-radius: 15px;">
+                <ul>
+                    <li class=""><a href="./index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </div>
+        </div>
+    	<div class="title">
+    </div>
+    <div class="issue">
+        <div class="issue-cover">
+            <img class="preview-cover" src="../images/er.png">
+        </div>
+        <div class="issue-intro">
+            <div class="introduction">
+                <h1>Security Risks of Suspicious Data 
+reduced by a Novel Model</h1>
+            </div>
+            <div style="padding: 15px;">
+                <h3 style="text-align: center;">Article</h3>
+                <button class="download-button"><a style="color: white;" class="anchor" href="../files/Article-2.pdf">Download</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="page-div">
+        <div class="left-bar">
+            <a class="anchor" href="#intro">Introduction</a><br>
+            <a class="anchor" href="#Dynamic Defense Model">Dynamic Defense Model</a><br>
+            <a class="anchor" href="#Data Label Marking">Data Label Marking</a><br>
+            <a class="anchor" href="#Label tracking">Label tracking</a><br>
+            <a class="anchor" href="#Dynamic Label Modulating">Dynamic Label Modulating</a><br>
+            <a class="anchor" href="#Runtime Controlling">Runtime Controlling</a><br>
+            <a class="anchor" href="#conclusion">conclusion</a><br>
+            <a class="anchor" href="#Refrences">Refrences</a><br>
+            <a class="anchor" href="#author">Author</a><br>
+
+        </div>
+        <div class="right-content">
+            <p id="intro">
+                <h2>Introduction</h2><br>
+                Modern operating systems are notable for being open, 
+allowing us to download data or run programmes from 
+any Internet source, reputable or not, without hesitation. 
+When we wish to use this data or codes and maintain the 
+system safe at the same time, a paradox arises.
+Even after decades of research and experience, this 
+issue is still seen as a major obstacle. In order to lessen 
+the security concerns brought on by this dubious data 
+or programmes for open operating systems, this study 
+provides a revolutionary dynamic defensive model 
+(DDM). The elements enable DDM to provide complete, 
+dynamic, and real-time security protection throughout 
+the operating system’s entire life cycle.
+            </p><br>
+            <p id="Dynamic Defense Model">
+                <h2>Dynamic Defense Model</h2><br>
+                A high-level security defense abstraction with four 
+essential parts is called the “Dynamic Defense Model”: 1. 
+Marking labels dynamically, 2. Tracking labels dynamically, 
+3. Modulating labels dynamically, 4. Run-time regulation.
+First of all, we cannot completely trust them given all the 
+questionable data and codes. As a result, we must give 
+them a distinctive label to set them apart from reliable 
+information or codes.
+Second, when the OS is functioning, suspect and sensitive 
+data are consumed and spread across the system, and 
+suspect processes produce child processes. We need 
+to monitor where this data flow, how much data was 
+contaminated, and how these shady activities impact the 
+system via dynamic label tracking.
+Thirdly, the original label may not adequately describe the 
+suspicious processes’ current security station after real-
+time execution of the suspicious processes was seen. 
+According to the suspect processes’ most recent activity,the label should be dynamically modified.
+Last but not least, we shouldn’t let any data or programmes 
+spread or operate freely in the system without any 
+controls.
+            </p><br>
+<p id="Data Label Marking">
+<h2>Data Label Marking</h2><br>
+                DDM typically offers three different types of labels: risk, 
+cap, and sens.
+Risk label: As soon as they enter the system, we should 
+identify all the suspect data and codes that originate from 
+Internet sources with specific names so that we can 
+distinguish them from the reliable data and codes.
+Cap label: The cap label is intended to stand for the 
+most fundamental or minimal capabilities (permissions or 
+privileges) that the suspicious code should be granted in 
+order to carry out its intended function.
+Sens label: The sens label is designed to represent how 
+important the sensitive data or resources are.
+</p><br>
+<p>
+<h2>Label tracking</h2><br>
+We define the high level rule of our label tracking as:
+ For the risk label, this rule can be specified as: 
+A ∼ B ⇒ B.risk = max(A.risk, B.risk)
+Label tracking is the same for both risk and sens labels.
+ For the cap_o label, this rule can be specified as: 
+A ∼ B ⇒ B.cap_o = (A.cap_o U B.cap_o)
+            </p><br>
+<p id="Dynamic Label Modulating">
+<h2>Dynamic Label Modulating</h2><br>
+ DDM modifies the label in three different ways: 
+automatically incrementally, automatically decrementally, 
+and Evaluative modulation.
+ The rule for automatic incremental modulation of the risk 
+label can be described as: risk_new = risk_old + f (action_
+ill)
+Similarly, the rule for automatic incremental modulation 
+of sens and cap_o label can be described as: sens_new = 
+sens_old + f (action_sen)
+cap_o_new = cap_o_old + f (action_sen)
+The rule for evaluative modulation can be described as: 
+label_new = f (actions)
+</p><br>
+<p id="Runtime Controlling">
+<h2>Runtime Controlling</h2>
+ We cannot let any data or codes to spread or operate 
+at will in the system without any controls. To avoid any 
+potential harm to the system or the loss of confidential 
+information, we should stop harmful acts in accordance 
+with security regulations.
+The following are examples of high-level runtime 
+regulating rules: For the risk label, this rule can be specified 
+as: running is permitted ⇐⇒ risk < threshold_kill
+According to this rule, a process can continue to run 
+if and only if the value of its risk label is lower than the 
+process-killing threshold. For the risk label and sens label,
+ this rule can be specified as: access is permitted ⇐⇒ risk + 
+sens < threshold_sys
+According to this rule, a process with a risk label can only 
+access resources or sensitive data if the sum of the risk 
+and sens values is below the system threshold. For the 
+cap_s and the cap_o label, this rule can be specified as: 
+access is permitted ⇐⇒ cap_o ⊆ cap_s
+According to this rule, a process with the label cap s can 
+only access resources or sensitive data with the label 
+cap_o if and only if cap_o’s value is a subset of cap_s.
+</p><br>
+<p id="conclusion">
+<h2>conclusion</h2>
+When we wish to employ dubious data or code from 
+an Internet source that we can’t completely trust while 
+maintaining the operating system’s security, it might 
+be quite difficult. A unique dynamic defensive model 
+is presented by the author as a solution to this issue, 
+reducing the security threats posed by suspicious data or 
+codes.
+
+</p><br>
+            <p id="Refrences">
+                <h2>Refrences</h2>
+                
+                  [1] Reducing Security Risks of Suspicious Data and 
+Codes Through a Novel Dynamic Defense Model 
+Zezhi Wu, Xingyuan Chen, Zhi Yang and Xuehui Du.  
+                
+            </p><br>
+          <p id="author">
+            <h2>Author</h2><br>
+                
+                    About the Author
+                    Gullipalli Suneetha is currently pursuing her Masters in the stream of Computer Science and 
+Engineering with a specialisation in Information Security at the National Institute of Technology 
+Calicut. Her interest lies in data and information security. Also, she is working on UAVs and their 
+security, as drone and related attacks are becoming more dangerous nowadays.
+                </p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body{
+            color: grey;
+            font-family: sans-serif;
+        }
+        .page-div{
+            padding-top: 20px;
+            display: flex;
+            background-color: #FAF7F0
+        }
+        .left-bar{
+            padding-left: 10px;
+            text-align: start;
+            width: 25%;
+        }
+        .right-content{
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div >
+            <div style="background-color:#667dd9 ;padding: 0.5%;">
+                    <img src="../images/logo.png" width="50px" style="border-radius: 15px;">
+                <ul>
+                    <li class=""><a href="./index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </div>
+        </div>
+    	<div class="title">
+    </div>
+    <div class="issue">
+        <div class="issue-cover">
+            <img class="preview-cover" src="../images/algo.jpeg">
+        </div>
+        <div class="issue-intro">
+            <div class="introduction">
+                <h1>Analysis of Auto Encoders for IOT Botnet Detection</h1>
+            </div>
+            <div style="padding: 15px;">
+                <h3 style="text-align: center;">Article</h3>
+                <button class="download-button"><a style="color: white;" class="anchor" href="/files/Article-1.pdf">Download</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="page-div">
+        <div class="left-bar">
+            <a class="anchor" href="#intro">Introduction</a><br>
+            <a class="anchor" href="#dive">Dive</a><br>
+            <a class="anchor" href="#references">Refrences</a><br>
+            <a class="anchor" href="#author">Author</a><br>
+        </div>
+        <div class="right-content">
+            <p id="intro">
+                <h2>Introduction</h2><br>
+               IoT Botnet detection utilizing deep-learning algorithms 
+has been extensively researched. Network attacks are 
+continually and dramatically changing, exhibiting new 
+patterns. The use of various autoencoders for IoT Botnet 
+identification has recently increased to reliably and quickly 
+identify unknown attack types (such as zero-day assaults) 
+and to lessen the load of the time-consuming labeling 
+operation. It takes a lot of time and effort to identify the 
+ideal model architecture and hyperparameter values 
+of the autoencoders that produce the best detection 
+performance, even though the autoencoders are 
+effective in detecting new sorts of attacks. This may be a 
+barrier to autoencoder-based IoT Botnet detection in real 
+implementations. We thoroughly examine autoencoders 
+using the benchmark dataset N-BaIoT to overcome this 
+issue. Using a basic autoencoder model, we compare 
+various model architectures and latent size combinations. 
+The outcomes show that an autoencoder model’s latent 
+size can significantly affect the IDS performance.
+The global value of the Internet of Things (IoT) devices 
+is predicted to range between $4 trillion in the low 
+estimate and $11 trillion in the high estimate by 2025. 
+The growth of IoT technology has brought an increasing 
+number of gadgets into our lives, making system security 
+a top priority. Many of the modern gadgets we use daily, 
+including smartphones, wearable technology, health 
+monitoring devices, etc., produce enormous volumes of 
+private data but have little to no built-in protection. Even 
+if the internet is already difficult to secure, the work is 
+made more difficult by the extra unsecured IoT devices. 
+Any internet-connected device, including mainframes for 
+businesses as well as smartwatches and household smart 
+kitchen appliances, can be compromised by botnets. 
+The free accessibility of the source code for IoT botnets 
+like BASHLITE and Mirai has encouraged hackers to 
+experiment with IoT malware. The IoT malware known as 
+Mirai has led to a revival in IoT malware and has been the 
+cause of significant DDoS assaults. The Mirai botnet, as 
+well as its variations and copycats, essentially served as 
+a wake-up call for the industry to strengthen IoT device 
+security.
+The goal of botnets is normally to infect as many devices as 
+they can, and complex botnets can even self-replicate and 
+adapt their behavior to identify and infect devices on their 
+own. Consequently, botnets are incredibly challenging to 
+find. The fact that botnets hide on devices with minimal 
+impact on the device’s functionality is another reason why 
+they are challenging to find and contain. For instance, 
+neither the typical user nor a small business may be 
+aware that a security camera is a component of an active 
+botnet. Therefore, it is crucial to distinguish botnets from 
+IoT device traffic. In this, we classify botnet traffic in the 
+IoT context using the dataset from. Nine commercial IoT 
+devices that were attacked by the Mirai and BASHLITE 
+botnets provided the data for this dataset, which contains 
+genuine network traffic information. Three classifiers, 
+Logistic Regression (LR), Support Vector Machines (SVM), 
+and Random Forest (RF), Autoencoder, are used to assess 
+the data, which is then categorized by a botnet, attack, 
+and device.
+The security of network systems and information assets 
+from network attacks is crucial, and there are numerous 
+techniques for accomplishing this. Of these, source 
+authentication utilizing cryptography with public keys 
+and message authentication can be used to secure 
+network systems. Now it is simple to determine whether 
+network traffic originates from a reliable source or not 
+due to these encryption techniques. As just a result, we 
+are capable of filtering out malicious traffic from shady 
+sources. Post-quantum public key cryptography is being 
+developed to take its place because conventional public 
+key cryptography will have security issues with the 
+introduction of quantum computing. Intrusion detection 
+systems are a common and efficient defense against 
+network attacks to overcome this constraint. 
+IoT Botnet detection has recently been established 
+by several research teams employing autoencoders, 
+a generative deep-learning model made up of an 
+encoder and a decoder. When M > N, the encoder 
+transforms an input M-dimensional vector into a latent 
+vector represented as an N-dimensional vector, which the decoder then reconstructs back to the original 
+M-dimensional vector (see Figure 1). Any input should be 
+recovered as close as feasible to the taught usual patterns 
+by an autoencoder-based IoT botnet detection system 
+that was trained with only typical traffic data. Therefore, 
+if an input instance’s reconstruction error exceeds a 
+certain threshold, we can label it as an assault; If not, 
+the input instance can be categorized as normal. In this 
+way, an autoencoder-based IoT Botnet detection system 
+can identify unidentified attack types when their patterns 
+diverge from the recognized typical patterns.
+To the best of our knowledge, we are the first to use 
+autoencoders to analyze IoT network traffic for anomalies 
+as a comprehensive way to identify botnet attacks. Even in 
+the broader field of network traffic analysis, autoencoders 
+have not been applied as fully automated standalone 
+malware detectors, but rather as preparatory tools for 
+feature learning or dimensionality reduction, or at most as 
+semimanual outlier detectors that heavily rely on human 
+labeling for subsequent classification or further inspection 
+by security analysts. 
+We conduct an empirical evaluation with real traffic data, 
+gathered from nine commercial IoT devices infected by 
+real botnets from two families, in contrast to previous 
+experimental studies on the detection of IoT botnets 
+or IoT traffic anomalies, which relied on emulated or 
+simulated data. We look at two of the most prevalent IoT-
+based botnets, Mirai and BASHLITE, which have already 
+proven their destructive potential.
+
+
+ 
+            </p><br>
+            <p id="dive">
+                <h2>Dive</h2><br>
+                Previous IoT-related detection studies generally 
+concentrated on the early stages of propagation and 
+communication with the C&C server when examining 
+the operational phases of botnets. However, given that 
+botnet attacks continue to mutate every day and become 
+more complex we predict that some of these mutations 
+may eventually succeed in getting around current early 
+detection strategies. Moreover, when connected to 
+external networks, mobile IoT devices could become 
+infected. For instance, when their owners arrive at airports, 
+smartwatches may connect to suspicious free Wi-Fi 
+networks. As a result, simply monitoring organizational 
+networks to spot early infection signs is insufficient. As a 
+result, we concentrate on the phase of a botnet operation 
+when IoT bots start initiating cyberattacks. In that regard, 
+our solution offers a final degree of security protection. 
+It quickly recognizes IoT-based attacks and lessens their 
+damage by sending out an instantaneous notice that 
+suggests isolating any affected devices from the network 
+until they are cleaned up.
+A key distinction between host-based  and network-
+based approaches is noted among the suggested botnet 
+detection methods. Because  we cannot rely on IoT 
+manufacturers to install designated host-based anomaly 
+detectors on their products,  there is limited access to 
+some IoT devices (such as wearables), so the installation 
+of software on end devices cannot be enforced, and the 
+limited computation and power of most IoT devices place 
+restrictions on the complexity and efficiency of host-
+based techniques, we believe host-based techniques are 
+less realistic for detecting compromised IoT devices,  In 
+the enterprise scenario we assume, where various and 
+numerous IoT devices connect to the organizational 
+network, a single non-distributed solution is preferred. 
+This is because multiple distributed solutions could 
+potentially consume energy and computation from the 
+devices and harm their functionality. 
+The IoT area is not the only one for which a hierarchical 
+taxonomy of network-based botnet detection methods 
+is presented. One of the sources of detection examined 
+in this study is honeypots. For gathering, comprehending, 
+describing, and tracking botnets, honeypots are frequently 
+utilized. They do not always help with identifying 
+compromised endpoints or the attacks coming from 
+them, though. Additionally, honeypots typically need a 
+sizable expenditure in the acquisition or replication of 
+real devices, data inspection, signature extraction, and 
+mutation monitoring. Accordingly, regular networks 
+serve as a secondary source of detection, and network 
+intrusion detection systems (NIDS) use pattern matching 
+to identify indications of malicious activity by continually 
+and automatically monitoring traffic data. These patterns 
+may rely on honeypot signatures, DNS traffic involving 
+a putative C&C server, data mining of traffic anomalies, 
+or hybrid strategies. Because linked appliances are often 
+task-oriented, we found that the anomaly-based method 
+is most suited for identifying corrupted IoT devices 
+(e.g., specifically designed to detect motion or measure 
+humidity). As a result, they run fewer and maybe simpler 
+network protocols and have less variable traffic than PCs. 
+As a result, spotting changes from their typical patterns 
+ought to be more precise and reliable.
+Numerous detection techniques were reviewed; 
+however, no autoencoders nor artificial neural networks 
+were cited. However, they differ from our strategy, have 
+nothing to do with the Internet of Things, and frequently 
+have no direct connection to botnets. Such publications 
+within the broader subject of cybersecurity have been 
+published more recently. As an illustration, and used 
+shallow autoencoders for initial feature learning and 
+dimensionality reduction, Random Forest, Deep Belief Networks, and Softmax for classification, and then for 
+final fine-tuning. Although outlier detection was included 
+in autoencoders, security analysts still needed to explicitly 
+classify data for later supervised learning. The authors 
+use deep learning to analyze system logs to find insider 
+threats, which is more similar to our method. Unlike us, 
+they rely on further manual scrutiny and use DNNs and 
+RNNs (LSTMs).
+Although the majority of the IoT devices in a test set gave 
+the autoencoders in our trials an FPR of zero, the variation 
+in FPR among the remaining IoT devices prompted us 
+to further study our data. The Philips B120N/10 baby 
+monitor had the highest FPR in comparison to the other 
+devices, and it also generated the most traffic (see Table 
+3), thus one may anticipate that the huge number of 
+training examples would lead to more reliable machine 
+learning models. However, this device also has the widest 
+range of capabilities due to the presence of many sensors 
+for ambient light, temperature, and humidity, a two-way 
+intercom feature, motion detection, and audio detection. 
+This may make it more challenging to observe it acting 
+normally, which could lead to more classification mistakes 
+in subsequent observations.
+In light of this, we postulate that different IoT devices 
+have varying degrees of difficulty in capturing the 
+usual traffic behavior  and that this challenge could 
+be due to (1) the  capabilities of the device and (2) 
+network communications  typically, results. then, the 
+simplicity of IoT device baseline behavior establishment 
+facilitates  Attack detection by anomaly detection. As 
+such Finally, intriguing queries are raised: 
+ Can the traffic behavior of IoT devices be predicted? 
+quantified?
+ Can there be a correlation between the degree of 
+predictability and the features that might be static or 
+dynamic, such as the number and type of sensors, 
+memory size, and operating system? (For instance, 
+the volume of distinct destination IPs per hour, 
+variation of the ratio of incoming to departing traffic) 
+be formalized?
+ Can the impact of these characteristics be ranked? 
+this degree of predictability?
+We assume that performance metrics for anomaly 
+detection can be easily translated from the predictability 
+of traffic behavior. For instance, an IoT device with high 
+traffic predictability would highlight any aberrant action, 
+causing the TPR to rise and detection times to shorten 
+in this scenario. From the (harmless) training set, we 
+retrieved static and dynamic features for empirical 
+validation. Afterward, we developed regression models 
+to examine the impact of these features on the test set’s 
+average FPR and detection times for the four detection 
+methods we considered. Figures 2c and 2d show our 
+initial conclusions using the characteristics we felt were 
+most important. Figure 2c illustrates how an increase 
+in inbound traffic variability results in a bigger average 
+FPR (p-value=0.019). This makes sense because less 
+predictable situations frequently show up as unusual (but 
+benign) traffic behaviors that are mistakenly labeled as 
+abnormal. Figure 2d demonstrates how longer detection 
+times are encouraged (pvalue=0.001) by an increase in the 
+maximum amount of inbound traffic. Lower predictability 
+causes larger ws* (more instances for majority voting), 
+which in turn causes longer detection times as we 
+optimize ws* to achieve 0% FPR on DSop.
+
+
+
+
+</p><br>
+<p><h2>Corporate Newsletter</h2> [4]:
+Newsletters are periodicals used to advertise or update 
+your subscribers with information about your product or 
+blog. They can be printed or emailed and are an excellent 
+way to maintain regular contact with your subscribers 
+and drive traffic to your site. Type the content of your 
+newsletter here.
+Newsletters are periodicals used to advertise or update 
+your subscribers with information about your product or 
+blog. 
+Newsletters are periodicals used to advertise or update 
+your subscribers with information about your product or 
+blog. They can be printed or emailed and are an excellent 
+way to maintain regular contact with your subscribers 
+and drive traffic to your site. Type the content of your 
+newsletter here.
+
+
+</p><br>
+<p><h2>Works with the industrys best</h2>
+Newsletters are periodicals used to advertise or update 
+your subscribers with information about your product or 
+blog. They can be printed or emailed and are an excellent 
+way to maintain regular contact with your subscribers 
+and drive traffic to your site. Type the content of your 
+newsletter here.
+Newsletters are periodicals used to advertise or update 
+your subscribers with information about your product or 
+blog. Type the content of your newsletter here.
+Newsletters are periodicals used to advertise or update 
+your subscribers with information about your product or 
+blog. They can be printed or emailed and are an excellent 
+way to maintain regular contact with your subscribers 
+and drive traffic to your site. Type the content of your 
+newsletter here.
+
+
+/p><br>
+<p><h2>The Observer</h2>
+Newsletters are periodicals used to advertise or update 
+your subscribers with information about your product or 
+blog. They can be printed or emailed and are an excellent 
+way to maintain regular contact with your subscribers 
+and drive traffic to your site. Type the content of your 
+newsletter here.
+Newsletters are periodicals used to advertise or update 
+your subscribers with information about your product 
+or blog. They are an excellent way to maintain regular contact with your subscribers.
+
+
+</p><br>
+
+            <p>
+                <h2>About the Author</h2><br>
+                <p id="About the author">
+                    
+                    <b>Sai Vasanthi Mandala</b> worked on power domain projects. Process in KYRGYZSTAN is to test the 
+modules like New Service Connection, Customer Support, Metering, Billing, Payments, Meter 
+Management, Configurations and also the same done in another project ‘OSHEE’ (Albania) in 
+APDCL (Assam Power Distribution Company Limited) is to test the modules like MDMS (Meter Data 
+Management System), FEP, OSM (Outage Management System), DSM (Demand Side Management), 
+PQM(Power Quality Management), NMS, CP(Customer Portal).
+She worked as freelancer in online platforms like User Testing, U-test. Also have good knowledge 
+and Experience in Digital Advertising, Digital marketing. She worked as a Subject Matter Expert in 
+the stream Computer Science.
+                </p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

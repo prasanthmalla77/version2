@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body{
+            color: grey;
+            font-family: sans-serif;
+        }
+        .page-div{
+            padding-top: 20px;
+            display: flex;
+            background-color: #FAF7F0
+        }
+        .left-bar{
+            padding-left: 10px;
+            text-align: start;
+            width: 25%;
+        }
+        .right-content{
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div >
+            <div style="background-color:#667dd9 ;padding: 0.5%;">
+                    <img src="../images/logo.png" width="50px" style="border-radius: 15px;">
+                <ul>
+                    <li class=""><a href="./index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </div>
+        </div>
+    	<div class="title">
+    </div>
+    <div class="issue">
+        <div class="issue-cover">
+            <img class="preview-cover" src="../images/algo.jpeg">
+        </div>
+        <div class="issue-intro">
+            <div class="introduction">
+                <h1>Predicting next item interaction with session aware and session based Recomendation Systems</h1>
+            </div>
+            <div style="padding: 15px;">
+                <h3 style="text-align: center;">Article</h3>
+                <button class="download-button"><a style="color: white;" class="anchor" href="/files/Article-1.pdf">Download</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="page-div">
+        <div class="left-bar">
+            <a class="anchor" href="#intro">Introduction</a><br>
+            <a class="anchor" href="#dive">Dive</a><br>
+            <a class="anchor" href="#references">Refrences</a><br>
+            <a class="anchor" href="#author">Author</a><br>
+        </div>
+        <div class="right-content">
+            <p id="intro">
+                <h2>Introduction</h2><br>
+               We live in a digital world where we can access to varieties 
+of information and every application and machines are 
+being automated with AI computer algorithms. These 
+algorithms are used in various online applications like 
+Ecommerce, Music, Video-Streaming etc, the main 
+advantage of using ArtificiaI Intelligence in these fields 
+helps businesses to gain profits by understanding the 
+customer or user behaviour, understanding latest trends, 
+incorporating best strategies into their applications to 
+grow their business.
+Recommender systems plays an important role in an 
+online e-commerce websites and media streaming 
+websites which are widely used where it helps to find 
+the individual user interests and providing suggestions. 
+Every recommendation system main goal is to provide 
+personalized recommendation which is relevant to the 
+user interest. 
+These recommendations can be attained by different 
+types of methods where every system works with an input 
+to provide a definite output. Every business uses their own 
+strategy which personalizes the recommendation system 
+to understand the individual user-interest by different 
+factors like age, gender, demographic location, past 
+user interaction data etc, because there are more than 7 
+million of people possessing different behaviour and it is 
+little tricky to predict the exact behaviour but with these 
+input factors we can assume that this type of users may 
+have some similarities. For example, a new user has signed 
+up to an online shopping application by not providing 
+complete information. Being a new user there will be no 
+past information which makes system to experience cold 
+start problem which means not understanding which 
+suggestion to be provided.
+With the few interactions with the items the system 
+recognizes the pattern and can provide suggestions with 
+the help of Collaborative-filtering technique.
+Ex. Being anonymous. By providing incomplete 
+information to the recommender, it cannot be able to 
+provide accurate suggestions and there are also several 
+other factors which recommender system is affected like 
+concept drift, data sparsity etc. Even though, the user 
+doesn’t provide any input data, or effected by various 
+factors the successful recommendation system has to 
+provide suggestions precisely to user interest.
+
+ 
+            </p><br>
+            <p id="dive">
+                <h2>Deep Learning in Recommender System</h2><br>
+               Recently, deep learning is applied to recommender systems 
+because these recommender systems are applied almost 
+all the online websites which is having different types of 
+data format. There are two types of data ie., structured 
+and unstructured data mostly of the information available 
+online. Structured data is textual data like reviews, tweets, 
+gradings, ratings etc and unstructured data is image data 
+like social posts, product images etc, it is impossible to 
+draw suggestions for these types of information so deep 
+learning models plays an important role for those types of 
+recommender systems. Deep learning is typically regarded 
+as a subfield of machine learning. 
+Content Based Filtering
+Based on the previous actions of the user or feedback 
+given to the product/item, Content based filtering uses 
+item features with which similar items or products are 
+recommended.
+Collaborative Filtering
+This filtering finds similarities between users and items ie., 
+user to user, item to item, item to user simultaneously to 
+recommend the products to the user.
+Hybrid Filtering
+It is the combination of both content and collaborative 
+filtering
+Types of similarity measures: Using distance metric 
+the similarities are identified and those are categorized 
+relevant or irrelevant using distance. The distance can 
+be calculated by using Minkowski distance, Manhattan 
+distance, Euclidean distance, Cosine similarity, Pearson 
+coefficient, Jaccard Similarity, Hamming distance.
+Deep learning is commonly defined as learning 
+deep representations or learning several levels of 
+representations and abstractions from data. It improves 
+a differentiable objective function using a stochastic 
+gradient descent variation (SGD). Both supervised and 
+unsupervised learning tasks have seen significant success 
+using neural architectures. Some of the deep learning 
+techniques are Multilayer perceptron, CNN (Convolutional 
+Neural Network), RNN (Recurrent Neural Network), Auto 
+Encoders, DRL (Deep Reinforcement Learning) etc.
+Sequential recommendation system: 
+These systems rely on traditional user-item rating ma
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><br>
+<p><h2>Sequential Recommedation System</h2> [4]:
+These systems rely on traditional user-item rating matrix 
+as an input. The goal is to predict immediate next user-
+item or point of interest that user will interact from the 
+time stamped rating matrix of sequence of events in data.
+
+
+</p><br>
+<p><h2>Session - Based Recommendation System</h2>
+This system predicts the next user action present on the 
+ongoing interactions of current session. In this system 
+users are anonymous which deals with first time users or 
+users who are not logged in. The input of these systems 
+are recorded user interactions arranged according time ordered.
+
+/p><br>
+<p><h2>Session-aware Recomendation System</h2>
+This system is also known as personalized session based 
+because the main goal is also identical but users are 
+known in this system, ex: users who are logged in. In this 
+system recommendations are personalized with user past 
+behaviour which can be beneficial for accuracy.
+Several researches were conducted to understand 
+what represents the state-of-the-art by evaluating 
+different neural approaches. Comparisons were made by 
+comparing newly proposed session-aware with existing 
+session-based models which do not use a consistent set 
+of baseline algorithms, so still research is scattered. The 
+main idea is to combine the user’s long term and short 
+term intents which can relate to the better accurate 
+suggestion so we have compared five recent neural 
+models like HGRU4REC,IIRNN(Inter-session and Intra-
+session Recurrent Neural Network),SHAN(Sequential 
+Recommender System based on Hierarchical 
+Attention Network),NCSF, NSAR(Neural Session-Aware 
+Recommendation)with set of existing neural and non-
+neural approaches to session based and heuristic 
+extensions like Extend, Boost and Remind of session based 
+techniques which uses interactions in ongoing sessions. 
+Nearest neighbors in session based are also used because 
+they are very competitive. 
+Four datasets Cosmetics, Lastfm, Retail, Xing which are 
+publicly available were considered in this experiment. 
+Surprisingly, heuristic extensions of existing session-based 
+algorithms were best performing. In many cases nearest 
+neighbors outperform recent session aware models 
+although they do not use long term users intents.
+With the analysis of several neural, non-neural and 
+nearest neighbors baseline results, the session aware 
+which combines users’ long term and short-term intents 
+can be able to provide accurate suggestions if they were 
+developed and still has huge potential to be state-of-the-
+art in predicting next user item interaction.
+
+</p><br>
+<h2>References</h2>
+[1] https://www.sciencedirect.com/science/article/pii/
+S0020025521005089<br>
+[2] https://analyticsindiamag.com/collaborative-filtering-vs-
+content-based-filtering-for-recommender-systems/<br>
+[3] https://arxiv.org/pdf/1707.07435
+<br>
+
+            <p>
+                <h2>About the Author</h2><br>
+                <p id="About the author">
+                    
+                    <b>S M Yunus Ansari</b> is currently pursuing his masters in the stream of Data 
+Science at JNTU Gurajada Vizianagaram and completed his bachelors at KL 
+University, Guntur. His fascination is towards practices in neural structures 
+of deep learning in the domain of recommender systems and his current 
+research interest lies in Data Science, Machine Learning and Deep Learning.
+                </p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
